@@ -1,0 +1,67 @@
+
+:root{
+    --color-grey-50: #0A0C0d;
+    --color-grey-100: #191C1F;
+    --color-grey-200: #212529;
+    --color-grey-300: #343A40;
+    --color-grey-400: #495057;
+    --color-grey-500: #868E96;
+    --color-grey-600: #ADB5BD;
+    --color-grey-700: #CED4DA;
+    --color-grey-800: #DEE2E6;
+    --color-grey-900: #EDF2FF;
+    --color-grey-1000: #F8F9FA;
+
+    --font-size-5: 1rem;
+    --font-size-6: 0.8rem;
+}
+
+
+.container__input{
+    position: relative;
+    margin: 40px 0;
+}
+
+
+.container__input > select{
+    width: 85%;
+    resize: none;
+    /*O elemento não oferece nenhum método controlável pelo usuário para redimensioná-lo.*/
+    padding: 8px 0;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--color-grey-900);
+    background: transparent;
+    font-size: var(--font-size-5);
+    font-weight: 300;
+    padding-left: 10px;
+    z-index: 100;
+    color: var(--color-grey-900);
+    
+}
+
+.container__input > label{
+    position: absolute;
+    left: 10px;
+    bottom: 8px;
+    color: var(--color-grey-500);
+    font-size: var(--font-size-5);
+  
+
+    transition: 0.3s;
+}
+
+
+.container__input > select:focus ~ label,
+.container__input > select:valid ~ label{
+    transform: translateY(-24px);
+    font-size: var(--font-size-6);
+    letter-spacing: 1px;
+    color: var(--color-grey-600);
+    text-transform: uppercase;
+}
+
+.container__input > select > option{
+    background-color: var(--color-grey-400);
+
+}
